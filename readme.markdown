@@ -1,6 +1,6 @@
 # C
 
-Jai->C data types for use in bindings.
+Types to make binding C code easier.
 
 # Usage
 
