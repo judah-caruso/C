@@ -39,7 +39,6 @@ static Type_Description types[] = {
     { "short_int"    , sizeof(short int)    , Type_Flags_None  },
     { "long_long"    , sizeof(long long)    , Type_Flags_None  },
     { "long_long_int", sizeof(long long int), Type_Flags_None  },
-    { "long_double"  , sizeof(long double)  , Type_Flags_Float },
 
     // Unsigned types
     { "unsigned_char"         , sizeof(unsigned char)         , Type_Flags_Unsigned },
@@ -72,10 +71,12 @@ static Type_Description types[] = {
     // Platform-specific types
     // @Todo(Judah): Make defines more exhaustive, define more platform-specific types.
     #if defined(__linux__)
-    { "ssize_t", sizeof(ssize_t), Type_Flags_None },
+    { "ssize_t"    , sizeof(ssize_t), Type_Flags_None  },
+    { "long_double", sizeof(double) , Type_Flags_Float }, 
     #endif
 
     #if defined(_WIN32) 
+    { "long_double", sizeof(long double), Type_Flags_Float },
     #endif
 
     #if defined(__APPLE__)

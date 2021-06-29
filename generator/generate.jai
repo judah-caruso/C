@@ -15,7 +15,6 @@ jai_types :: Type.[
     target := get_build_options();
     target.output_type = .NO_OUTPUT;
     set_build_options(target);
-
     print("\n:: Generating types...\n");
 
     types := get_type_list();
@@ -84,7 +83,8 @@ END;
 
 MODULE_END :: #string END
 
-#assert(size_of(uintptr_t) >= size_of(u32), "uintptr_t was defined with an incorrect size: %%\n", size_of(uintptr_t));
+#assert(size_of(uintptr_t) >= size_of(u32), "uintptr_t was defined with an incorrect size: %%", size_of(uintptr_t));
+#assert(size_of(long_double) >= size_of(double), "long double was defined with an incorrect size: %%!", size_of(long_double));
 END;
 
 Type_Flags :: enum u32 {
