@@ -15,11 +15,12 @@ jai_types :: Type.[
     target := get_build_options();
     target.output_type = .NO_OUTPUT;
     set_build_options(target);
+
     print("\n:: Generating types...\n");
 
     types := get_type_list();
-
     longest := 0;
+    
     for 0..types.count - 1 {
         str := to_string(types.list[it].type_id);
         if str.count > longest then longest = str.count;

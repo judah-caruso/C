@@ -8,10 +8,6 @@ typedef enum {
     Type_Flags_None,
     Type_Flags_Unsigned,
     Type_Flags_Float,
-
-    Type_Flags_Platform_Windows_Only,
-    Type_Flags_Platform_Linux_Only,
-    Type_Flags_Platform_Mac_Only,
 } Type_Flags;
 
 typedef struct {
