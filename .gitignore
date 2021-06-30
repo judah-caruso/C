@@ -1,5 +1,8 @@
-*.exe
-*.pdb
 .build/
 generator/.build/
-generator/
+*.exe
+*.dll
+*.so
+*.lib
+*.obj
+*.pdb
