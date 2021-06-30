@@ -31,7 +31,7 @@ If you don't want to use the module version of this, you can simply copy
 #load "c.jai"; // Renaming generated_static.jai to c.jai or similar is recommended.
 
 lib :: #foreign_library "lib";
-greet :: (name: *u8) -> *u8 #foreign lib;
+greet :: (name: *c.char) -> *c.char #foreign lib;
 
 // C:
 char* greet(const char* name);
