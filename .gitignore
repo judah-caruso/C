@@ -6,3 +6,4 @@ generator/.build/
 *.lib
 *.obj
 *.pdb
+*.exp

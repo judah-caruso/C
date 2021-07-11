@@ -33,6 +33,3 @@ ptrdiff_t              :: #type u64;
 wchar_t                :: #type u32;
 ssize_t                :: #type s64;
 long_double            :: #type float64;
-
-#assert(size_of(uintptr_t) >= size_of(u32), "uintptr_t was defined with an incorrect size: %", size_of(uintptr_t));
-#assert(size_of(long_double) >= size_of(double), "long double was defined with an incorrect size: %!", size_of(long_double));
